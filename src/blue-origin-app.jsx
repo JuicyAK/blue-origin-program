@@ -7,7 +7,6 @@ export default function BlueOriginProgram() {
   const [turnaroundDays, setTurnaroundDays] = useState(21);
 
   const currentCapacity = boosters * (365 / turnaroundDays);
-  const launchesPerBooster = Math.round(365 / turnaroundDays);
   
   const capacityScenarios = [
     { boosters: 1, turnaround: 21, launches: Math.round(365/21) },
