@@ -113,7 +113,7 @@ export default function BlueOriginProgram() {
               
               <div style={{ marginBottom: '1rem' }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.7rem', marginBottom: '0.4rem', opacity: 0.8 }}>
-                  <span>Boosters</span>
+                  <span>Boosters (Number of operational rockets we have)</span>
                   <strong>{boosters}</strong>
                 </div>
                 <input
@@ -128,7 +128,7 @@ export default function BlueOriginProgram() {
 
               <div>
                 <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.7rem', marginBottom: '0.4rem', opacity: 0.8 }}>
-                  <span>Turnaround</span>
+                  <span>Turnaround (Days between launches for each booster)</span>
                   <strong>{turnaroundDays}d</strong>
                 </div>
                 <input
@@ -159,7 +159,7 @@ export default function BlueOriginProgram() {
                 <div style={{ fontSize: '0.65rem', opacity: 0.5 }}>launches/yr</div>
               </div>
 
-              <div style={{ background: Math.round(currentCapacity) >= 216 ? 'rgba(0, 170, 68, 0.08)' : 'rgba(204, 102, 51, 0.08)', padding: '0.8rem', borderRadius: '3px', border: `1px solid ${Math.round(currentCapacity) >= 216 ? '#ddd' : '#ddd'}`, boxShadow: '0 1px 3px rgba(0,0,0,0.05)' }}>
+              <div style={{ background: Math.round(currentCapacity) >= 216 ? 'rgba(0, 170, 68, 0.08)' : 'rgba(204, 102, 51, 0.08)', padding: '0.8rem', borderRadius: '3px', border: `1px solid #ddd`, boxShadow: '0 1px 3px rgba(0,0,0,0.05)' }}>
                 <div style={{ fontSize: '0.65rem', opacity: 0.6, marginBottom: '0.3rem', textTransform: 'uppercase', letterSpacing: '0.2px' }}>Gap</div>
                 <div style={{ fontSize: '1.4rem', fontWeight: 300, color: Math.round(currentCapacity) >= 216 ? '#00AA44' : '#CC6633' }}>
                   {Math.max(0, 216 - Math.round(currentCapacity))}
@@ -182,6 +182,23 @@ export default function BlueOriginProgram() {
                   <Bar dataKey="launches" fill="#0066CC" radius={[1, 1, 0, 0]} />
                 </BarChart>
               </ResponsiveContainer>
+              <div style={{ fontSize: '0.7rem', marginTop: '0.75rem', opacity: 0.7, lineHeight: '1.4' }}>
+                Even with 4 boosters at optimal speed, you only hit 69 launches. You still fall short of 216.
+              </div>
+            </div>
+
+            {/* Critical Gap Analysis */}
+            <div style={{ background: '#fff', padding: '1rem', borderRadius: '3px', border: '1px solid #ddd', boxShadow: '0 1px 3px rgba(0,0,0,0.05)', gridColumn: '1 / -1' }}>
+              <div style={{ fontSize: '0.7rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.4px', opacity: 0.7, marginBottom: '0.75rem' }}>
+                The Core Problem
+              </div>
+              <div style={{ fontSize: '0.75rem', lineHeight: '1.5', opacity: 0.8 }}>
+                <strong>Blue Origin cannot meet Amazon's 216-launch requirement with refurbishment optimization alone.</strong> They would need:
+                <div style={{ marginTop: '0.5rem', marginLeft: '1rem' }}>
+                  <div>• Either: ~13 operational boosters (unrealistic)</div>
+                  <div>• Or: A combination of speed optimization + building more boosters in parallel</div>
+                </div>
+              </div>
             </div>
           </div>
         )}
