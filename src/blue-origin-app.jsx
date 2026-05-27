@@ -29,17 +29,17 @@ export default function BlueOriginProgram() {
     {
       phase: 'Assess',
       days: '1-30',
-      items: ['Baseline metrics', 'Critical path', 'Fleet inventory', 'Stakeholder alignment']
+      items: ['Establish baseline metrics', 'Map critical dependencies', 'Inventory fleet status', 'Align with stakeholders']
     },
     {
       phase: 'Pilot',
       days: '30-60',
-      items: ['Refurb optimization', 'Supply chain', 'Production schedule', 'Dashboard setup']
+      items: ['Test refurb optimization', 'Secure supply chain', 'Plan production schedule', 'Build tracking dashboard']
     },
     {
       phase: 'Scale',
       days: '60-100',
-      items: ['Scale improvements', 'Commission B#2', 'SLA tracking', 'Ops handoff']
+      items: ['Roll out improvements', 'Commission booster #2', 'Implement SLA tracking', 'Transition to operations']
     }
   ];
 
@@ -183,7 +183,7 @@ export default function BlueOriginProgram() {
                 </BarChart>
               </ResponsiveContainer>
               <div style={{ fontSize: '0.7rem', marginTop: '0.75rem', opacity: 0.7, lineHeight: '1.4' }}>
-                Even with 4 boosters at optimal speed, you only hit 69 launches. You still fall short of 216.
+                Even with 4 boosters at optimal speed, we only hit 69 launches. We still fall short of 216.
               </div>
             </div>
 
@@ -193,7 +193,7 @@ export default function BlueOriginProgram() {
                 The Core Problem
               </div>
               <div style={{ fontSize: '0.75rem', lineHeight: '1.5', opacity: 0.8 }}>
-                <strong>Blue Origin cannot meet Amazon's 216-launch requirement with refurbishment optimization alone.</strong> They would need:
+                <strong>We cannot meet Amazon's 216-launch requirement with refurbishment optimization alone.</strong> We would need:
                 <div style={{ marginTop: '0.5rem', marginLeft: '1rem' }}>
                   <div>• Either: ~13 operational boosters (unrealistic)</div>
                   <div>• Or: A combination of speed optimization + building more boosters in parallel</div>
